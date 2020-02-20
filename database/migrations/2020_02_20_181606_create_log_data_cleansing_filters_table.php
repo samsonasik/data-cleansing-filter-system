@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLogDataCleansingFilterTable extends Migration
+class CreateLogDataCleansingFiltersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateLogDataCleansingFilterTable extends Migration
      */
     public function up()
     {
-        Schema::create('log_data_cleansing_filter', function (Blueprint $table) {
+        Schema::create('log_data_cleansing_filters', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('customer_id')->unsigned();
             $table->integer('score');
@@ -30,7 +30,7 @@ class CreateLogDataCleansingFilterTable extends Migration
             $table->timestamps();
         });
 
-        Schema::table('log_data_cleansing_filter', function($table) {
+        Schema::table('log_data_cleansing_filters', function($table) {
             $table->foreign('customer_id')
                  ->references('id')->on('customers')
                  ->onDelete('cascade');
@@ -44,6 +44,6 @@ class CreateLogDataCleansingFilterTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('log_data_cleansing_filter');
+        Schema::dropIfExists('log_data_cleansing_filters');
     }
 }

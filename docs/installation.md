@@ -26,7 +26,6 @@ DB_PASSWORD=
 ```
 php artisan database:create
 php artisan migrate
-php artisan db:seed
 ```
 
 4. Run Local Development Server:

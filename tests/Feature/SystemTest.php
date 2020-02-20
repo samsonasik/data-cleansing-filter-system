@@ -13,7 +13,7 @@ class SystemTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function testDisplayReport()
+    public function testDisplayEmptyReport()
     {
         $response = $this->get('/report');
         $response->assertStatus(200);

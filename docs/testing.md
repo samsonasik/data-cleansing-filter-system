@@ -23,7 +23,6 @@ DB_PASSWORD=
 ```bash
 php artisan database:create --env=testing
 php artisan migrate --env=testing
-php artisan db:seed --env=testing
 ```
 
 After it, you can run:
