@@ -34,7 +34,7 @@
 
                     <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('home') }}">{{ __('Home') }}</a>
+                                <a class="nav-link" href="{{ route('form') }}">{{ __('Form') }}</a>
                             </li>
                     </ul>
 
