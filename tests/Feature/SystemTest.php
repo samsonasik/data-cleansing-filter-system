@@ -7,6 +7,8 @@ use Tests\TestCase;
 
 class SystemTest extends TestCase
 {
+    use RefreshDatabase;
+
     public function testDisplayForm()
     {
         $response = $this->get('/');
