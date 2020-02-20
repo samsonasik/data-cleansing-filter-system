@@ -16,7 +16,7 @@ jobs:
         env:
           MYSQL_USER: user
           MYSQL_PASSWORD: password
-          MYSQL_DATABASE: test
+          MYSQL_DATABASE: data_cleansing_filter_system
           MYSQL_ROOT_PASSWORD: password
         ports:
           - 3306
