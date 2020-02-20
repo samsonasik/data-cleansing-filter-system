@@ -37,11 +37,12 @@ jobs:
         run: "composer install --prefer-dist --no-progress --no-suggest"
       - name: "Database setup"
         run: |
+          cp .env.example.github-action .env
           php artisan database:create
           php artisan migrate
           php artisan db:seed
       - name: "Run test suite"
-        run: "cp .env.example.github-action .env && vendor/bin/phpunit --coverage-clover=coverage.xml"
+        run: "vendor/bin/phpunit --coverage-clover=coverage.xml"
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
