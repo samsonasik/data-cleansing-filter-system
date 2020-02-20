@@ -18,8 +18,8 @@ class CreateCustomersTable extends Migration
             $table->string('title', 20)->nullable();
             $table->string('name', 150);
             $table->string('email', 50);
-            $table->mediumText('address');
             $table->date('date_of_birth');
+            $table->mediumText('address');
             $table->string('city', 50);
             $table->string('region', 50);
             $table->string('postcode', 10);
