@@ -39,7 +39,22 @@
                                     <td align="center" colspan="12">You didn't import customers data yet</td>
                                 </tr>
                             @else
-
+                                @foreach($log as $log)
+                                    <tr>
+                                        <td>{{ $log->score }}</td>
+                                        <td>{{ $log->customer_id }}</td>
+                                        <td>{{ $log->title_correct_suggestion }}</td>
+                                        <td>{{ $log->name_correct_suggestion }}</td>
+                                        <td>{{ $log->email_correct_suggestion }}</td>
+                                        <td>{{ $log->date_of_birth_correct_suggestion }}</td>
+                                        <td>{{ $log->address_correct_suggestion }}</td>
+                                        <td>{{ $log->city_correct_suggestion }}</td>
+                                        <td>{{ $log->region_correct_suggestion }}</td>
+                                        <td>{{ $log->postcode_correct_suggestion }}</td>
+                                        <td>{{ $log->country_code_correct_suggestion }}</td>
+                                        <td>{{ $log->telephone_correct_suggestion }}</td>
+                                    </tr>
+                                @endforeach
                             @endif
                         </table>
 
