@@ -27,7 +27,7 @@ jobs:
           mysql version: 5.7
           mysql password: test
           mysql user: test
-          mysql database: data_cleansing_filter_system
+          mysql database: data_cleansing_filter_system_test
           host port: 13306
       - name: Checkout
         uses: actions/checkout@v2

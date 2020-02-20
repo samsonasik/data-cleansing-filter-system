@@ -5,4 +5,5 @@ Data Cleansing Filter System
 [![Code Coverage](https://codecov.io/gh/samsonasik/data-cleansing-filter-system/branch/master/graph/badge.svg)](https://codecov.io/gh/samsonasik/data-cleansing-filter-system)
 
 [1. Installation](/docs/installation.md)\
-[2. Database Structure](/docs/database-structure.md)
+[2. Database Structure](/docs/database-structure.md)\
+[3. Testing](/docs/testing.md)
