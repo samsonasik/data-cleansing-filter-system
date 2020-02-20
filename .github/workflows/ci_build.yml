@@ -36,4 +36,4 @@ jobs:
       - name: "Install dependencies"
         run: "composer install --prefer-dist --no-progress --no-suggest && composer development-enable"
       - name: "Run test suite"
-        run: "cp .env.example.travis .env && vendor/bin/phpunit"
+        run: "cp .env.example.github-action .env && vendor/bin/phpunit"
