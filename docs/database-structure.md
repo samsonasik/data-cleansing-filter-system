@@ -1,6 +1,6 @@
 Database Structure
 ==================
 
-1. customers table with structure:
+Database is using `MySQL`. There are 2 tables to store the data: customers, and log_data_cleansing_filter with the following relation:
 
-![Customer Table Structure](/docs/image/customers_table_structure.png)
+![Db structure](/docs/image/table-relation.png)
