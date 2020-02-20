@@ -11,3 +11,4 @@
 |
 */
 Route::get('/', 'SystemController@form')->name('form');
+Route::get('/report', 'SystemController@report')->name('report');

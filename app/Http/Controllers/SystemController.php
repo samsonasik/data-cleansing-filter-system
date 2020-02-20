@@ -46,4 +46,9 @@ class SystemController extends Controller
             }),
         ]);
     }
+
+    public function report()
+    {
+        return view('system.report', []);
+    }
 }
