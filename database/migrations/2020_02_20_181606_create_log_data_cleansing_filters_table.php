@@ -19,7 +19,6 @@ class CreateLogDataCleansingFiltersTable extends Migration
             $table->integer('score');
             $table->mediumText('title_correct_suggestion')->nullable();
             $table->mediumText('name_correct_suggestion')->nullable();
-            $table->mediumText('email_correct_suggestion')->nullable();
             $table->mediumText('date_of_birth_correct_suggestion')->nullable();
             $table->mediumText('address_correct_suggestion')->nullable();
             $table->mediumText('city_correct_suggestion')->nullable();

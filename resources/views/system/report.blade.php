@@ -23,7 +23,6 @@
                                     <th>Customer ID</th>
                                     <th>Title Suggestion</th>
                                     <th>Name Suggestion</th>
-                                    <th>Email Suggestion</th>
                                     <th>DOB Suggestion</th>
                                     <th>Address Suggestion</th>
                                     <th>City Suggestion</th>
@@ -45,7 +44,6 @@
                                         <td>{{ $log->customer_id }}</td>
                                         <td>{{ $log->title_correct_suggestion }}</td>
                                         <td>{{ $log->name_correct_suggestion }}</td>
-                                        <td>{{ $log->email_correct_suggestion }}</td>
                                         <td>{{ $log->date_of_birth_correct_suggestion }}</td>
                                         <td>{{ $log->address_correct_suggestion }}</td>
                                         <td>{{ $log->city_correct_suggestion }}</td>

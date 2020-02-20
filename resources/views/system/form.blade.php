@@ -21,7 +21,6 @@
                                 <tr>
                                     <th>Title</th>
                                     <th>Name</th>
-                                    <th>Email</th>
                                     <th>DOB</th>
                                     <th>Address</th>
                                     <th>City</th>
@@ -36,7 +35,6 @@
                                 <tr>
                                     <td>{{ $customer->title }}</td>
                                     <td>{{ $customer->name }}</td>
-                                    <td>{{ $customer->email }}</td>
                                     <td>{{ $customer->date_of_birth }}</td>
                                     <td>{{ $customer->address }}</td>
                                     <td>{{ $customer->city }}</td>
