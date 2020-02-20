@@ -51,7 +51,7 @@
 
                     </div>
 
-                    <button name="clean"> Clean </button>
+                    <button name="import"> Import </button>
 
                 </div>
             </div>
