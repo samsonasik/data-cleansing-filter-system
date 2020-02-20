@@ -14,8 +14,9 @@
                         </div>
                     @endif
 
+                    <div style="overflow: hidden;overflow-x: auto;width: 100%">
 
-                        <table class="table table-striped table-bordered table-hover" style="font-size: 10px;width: 100%">
+                        <table class="table table-striped table-bordered table-hover" style="font-size: 11px;">
                             <thead>
                                 <tr>
                                     <th>Title</th>
@@ -32,19 +33,23 @@
                             </thead>
                             <tbody>
                             @foreach($customers as $customer)
-                                <td>{{ $customer->title }}</td>
-                                <td>{{ $customer->name }}</td>
-                                <td>{{ $customer->email }}</td>
-                                <td>{{ $customer->date_of_birth }}</td>
-                                <td>{{ $customer->address }}</td>
-                                <td>{{ $customer->city }}</td>
-                                <td>{{ $customer->region }}</td>
-                                <td>{{ $customer->postcode }}</td>
-                                <td>{{ $customer->country_code }}</td>
-                                <td>{{ $customer->telephone }}</td>
+                                <tr>
+                                    <td>{{ $customer->title }}</td>
+                                    <td>{{ $customer->name }}</td>
+                                    <td>{{ $customer->email }}</td>
+                                    <td>{{ $customer->date_of_birth }}</td>
+                                    <td>{{ $customer->address }}</td>
+                                    <td>{{ $customer->city }}</td>
+                                    <td>{{ $customer->region }}</td>
+                                    <td>{{ $customer->postcode }}</td>
+                                    <td>{{ $customer->country_code }}</td>
+                                    <td>{{ $customer->telephone }}</td>
+                                </tr>
                             @endforeach
                             </tbody>
                         </table>
+
+                    </div>
 
                     <button name="clean"> Clean </button>
 
