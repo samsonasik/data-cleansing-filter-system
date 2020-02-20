@@ -21,7 +21,12 @@
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./app</directory>
+            <file>./app/Http/Controllers/SystemController.php</file>
+            <!-- <directory suffix=".php"></directory>
+            <exclude>
+                <file>../ext_emconf.php</file>
+                <directory suffix=".php">../tests</directory>
+            </exclude> -->
         </whitelist>
     </filter>
     <php>
