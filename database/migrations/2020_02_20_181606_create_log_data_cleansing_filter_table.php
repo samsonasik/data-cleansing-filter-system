@@ -15,7 +15,7 @@ class CreateLogDataCleansingFilterTable extends Migration
     {
         Schema::create('log_data_cleansing_filter', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('customer_id');
+            $table->bigInteger('customer_id')->unsigned();
             $table->integer('score');
             $table->mediumText('title_correct_suggestion')->nullable();
             $table->mediumText('name_correct_suggestion')->nullable();
@@ -28,6 +28,12 @@ class CreateLogDataCleansingFilterTable extends Migration
             $table->mediumText('country_code_correct_suggestion')->nullable();
             $table->mediumText('telephone_correct_suggestion')->nullable();
             $table->timestamps();
+        });
+
+        Schema::table('log_data_cleansing_filter', function($table) {
+            $table->foreign('customer_id')
+                 ->references('id')->on('customers')
+                 ->onDelete('cascade');
         });
     }
 
