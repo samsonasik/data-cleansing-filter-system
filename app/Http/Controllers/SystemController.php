@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\LogDataCleansingFilter;
 use Illuminate\Http\Request;
 
 class SystemController extends Controller
@@ -49,6 +50,12 @@ class SystemController extends Controller
 
     public function report()
     {
-        return view('system.report', []);
+        $log = LogDataCleansingFilter::all();
+        $isEmpty = $log->isEmpty();
+
+        return view('system.report', [
+            'log' => $log,
+            'isEmpty' => $isEmpty,
+        ]);
     }
 }

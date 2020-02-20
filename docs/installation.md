@@ -33,3 +33,5 @@ php artisan migrate
 ```bash
 php artisan serve
 ```
+
+5. Open in the browser http://localhost:8000

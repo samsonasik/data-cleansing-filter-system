@@ -33,11 +33,21 @@
                                     <th>Telephone Suggestion</th>
                                 </tr>
                             </thead>
+
+                            @if ($isEmpty)
+                                <tr>
+                                    <td align="center" colspan="12">You didn't import customers data yet</td>
+                                </tr>
+                            @else
+
+                            @endif
                         </table>
 
                     </div>
 
-                    <button name="truncate">Truncate data to retry import</button>
+                    @if (! $isEmpty)
+                        <button name="truncate">Truncate data to retry import</button>
+                    @endif
 
                 </div>
             </div>
