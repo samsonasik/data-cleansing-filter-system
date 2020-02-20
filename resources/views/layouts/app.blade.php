@@ -34,10 +34,10 @@
 
                     <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('form') }}">{{ __('Form') }}</a>
+                                <a class="nav-link {{ (request()->is('/')) ? 'active' : '' }}" href="{{ route('form') }}">{{ __('Form') }}</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('report') }}">{{ __('Report') }}</a>
+                                <a class="nav-link {{ (request()->is('report')) ? 'active' : '' }}" href="{{ route('report') }}">{{ __('Report') }}</a>
                             </li>
                     </ul>
 
