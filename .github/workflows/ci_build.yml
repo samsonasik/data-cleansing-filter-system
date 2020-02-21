@@ -38,9 +38,8 @@ jobs:
       - name: "Database setup"
         run: |
           cp .env.example.github-action .env.testing
-          php artisan database:create
-          php artisan migrate
-          php artisan db:seed
+          php artisan database:create --env=testing
+          php artisan migrate --env=testing
       - name: "Run test suite"
         run: "vendor/bin/phpunit --coverage-clover=coverage.xml"
       - name: Upload coverage to Codecov
