@@ -145,8 +145,9 @@ class SystemController extends Controller
         ]);
     }
 
-    public function import()
+    public function import(Request $request)
     {
+        $request->session()->flash('status', 'Customer data have been succesfully imported!');
         return redirect('report');
     }
 
