@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Customer;
 use App\LogDataCleansingFilter;
 use Illuminate\Http\Request;
 
@@ -16,8 +17,11 @@ class SystemController extends Controller
 
     public function form()
     {
+        $isImported = ! Customer::all()->isEmpty();
+        $customers  = $isImported ? [] : $this->customers;
+
         return view('system.form', [
-            'customers' => collect($this->customers)->map(function ($item) {
+            'customers' => collect($customers)->map(function ($item) {
                 return (object) $item;
             }),
         ]);
@@ -25,7 +29,9 @@ class SystemController extends Controller
 
     public function import(Request $request)
     {
-        $request->session()->flash('status', 'Customer data have been succesfully imported!');
+        $request->session()
+                ->flash('status', 'Customer data have been succesfully imported!');
+
         return redirect('report');
     }
 

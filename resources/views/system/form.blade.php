@@ -33,19 +33,25 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            @foreach($customers as $customer)
-                                <tr>
-                                    <td>{{ $customer->title }}</td>
-                                    <td>{{ $customer->name }}</td>
-                                    <td>{{ $customer->date_of_birth }}</td>
-                                    <td>{{ $customer->address }}</td>
-                                    <td>{{ $customer->city }}</td>
-                                    <td>{{ $customer->region }}</td>
-                                    <td>{{ $customer->postcode }}</td>
-                                    <td>{{ $customer->country_code }}</td>
-                                    <td>{{ $customer->telephone }}</td>
-                                </tr>
-                            @endforeach
+                                @if ($customers->isEmpty())
+                                    <tr>
+                                        <td align="center" colspan="9">Customer data already imported.</td>
+                                    </tr>
+                                @else
+                                    @foreach($customers as $customer)
+                                        <tr>
+                                            <td>{{ $customer->title }}</td>
+                                            <td>{{ $customer->name }}</td>
+                                            <td>{{ $customer->date_of_birth }}</td>
+                                            <td>{{ $customer->address }}</td>
+                                            <td>{{ $customer->city }}</td>
+                                            <td>{{ $customer->region }}</td>
+                                            <td>{{ $customer->postcode }}</td>
+                                            <td>{{ $customer->country_code }}</td>
+                                            <td>{{ $customer->telephone }}</td>
+                                        </tr>
+                                    @endforeach
+                                @endif
                             </tbody>
                         </table>
 
