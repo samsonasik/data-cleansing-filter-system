@@ -20,4 +20,11 @@ class SystemTest extends TestCase
         $response = $this->get('/report');
         $response->assertStatus(200);
     }
+
+    public function testImportCustomersRedirectToReport()
+    {
+        $response = $this->post('/import');
+        $response->assertStatus(302);
+        $response->assertRedirect(route('report'));
+    }
 }
