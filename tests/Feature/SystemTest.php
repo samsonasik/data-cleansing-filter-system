@@ -2,6 +2,8 @@
 
 namespace Tests\Feature;
 
+use App\Customer;
+use App\LogDataCleansingFilter;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -26,5 +28,12 @@ class SystemTest extends TestCase
         $response = $this->post('/import');
         $response->assertStatus(302);
         $response->assertRedirect(route('report'));
+    }
+
+    public function testDeleteDataMakeEmptyRecords()
+    {
+        $this->get('/delete');
+        $this->assertCount(0, Customer::all());
+        $this->assertCount(0, LogDataCleansingFilter::all());
     }
 }
