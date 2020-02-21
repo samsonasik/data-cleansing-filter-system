@@ -15,7 +15,7 @@ class SystemController extends Controller
         $this->customers = include storage_path('app/customers.php');
     }
 
-    public function form(Request $request)
+    public function form()
     {
         $isImported = ! Customer::all()->isEmpty();
         $customers  = $isImported ? [] : $this->customers;
@@ -32,7 +32,7 @@ class SystemController extends Controller
         $request->session()
                 ->flash('status', 'Customer data have been succesfully imported!');
 
-        return redirect('report');
+        return redirect()->route('report');
     }
 
     public function report()
@@ -44,5 +44,18 @@ class SystemController extends Controller
             'log' => $log,
             'isEmpty' => $isEmpty,
         ]);
+    }
+
+    /**
+     * @internal
+     *
+     * Used for debugging purpose
+     */
+    public function delete()
+    {
+        LogDataCleansingFilter::whereNotNull('id')->delete();;
+        Customer::whereNotNull('id')->delete();
+
+        exit;
     }
 }

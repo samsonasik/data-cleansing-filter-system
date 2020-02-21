@@ -18,7 +18,7 @@ class CustomerImport
     {
         $isImported = ! Customer::all()->isEmpty();
         if ($isImported) {
-            return redirect('report');
+            return redirect()->route('report');
         }
 
         $customers = include storage_path('app/customers.php');

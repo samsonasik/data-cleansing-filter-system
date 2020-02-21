@@ -23,3 +23,4 @@ Route::post('/import', 'SystemController@import')
     ]);
 
 Route::get('/report', 'SystemController@report')->name('report');
+Route::get('/delete', 'SystemController@delete')->name('delete');

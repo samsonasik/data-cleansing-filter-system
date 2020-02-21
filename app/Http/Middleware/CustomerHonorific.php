@@ -24,7 +24,7 @@ class CustomerHonorific
      */
     public function handle($request, Closure $next)
     {
-        $datacleansing = $request->session()->get('datacleansing');
+        $datacleansing = $request->attributes->get('datacleansing');
         $customers     = Customer::all();
 
         foreach ($customers as $customer) {
@@ -45,8 +45,7 @@ class CustomerHonorific
                 : ($datacleansing[$customer->id]['score'] + self::SCORE);
         }
 
-        $request->session()->put('datacleansing', $datacleansing);
-
+        $request->attributes->set('datacleansing', $datacleansing);
         return $next($request);
     }
 }
