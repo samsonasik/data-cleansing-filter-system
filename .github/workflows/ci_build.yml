@@ -37,7 +37,7 @@ jobs:
         run: "composer install --prefer-dist --no-progress --no-suggest"
       - name: "Database setup"
         run: |
-          cp .env.example.github-action .env
+          cp .env.example.github-action .env.testing
           php artisan database:create
           php artisan migrate
           php artisan db:seed
