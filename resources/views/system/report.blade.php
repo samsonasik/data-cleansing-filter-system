@@ -35,7 +35,7 @@
 
                             @if ($isEmpty)
                                 <tr>
-                                    <td align="center" colspan="12">You didn't import customers data yet</td>
+                                    <td align="center" colspan="12">You didn't import customers data yet OR no cleansing data available.</td>
                                 </tr>
                             @else
                                 @foreach($log as $log)
