@@ -23,9 +23,10 @@ class SystemTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function testImportCustomersRedirectToReport()
+    public function testImportCustomersFillCustomersDataAndRedirectToReport()
     {
         $response = $this->post('/import');
+        $this->assertCount(12, Customer::all());
         $response->assertStatus(302);
         $response->assertRedirect(route('report'));
     }
