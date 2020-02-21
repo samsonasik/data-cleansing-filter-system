@@ -11,4 +11,5 @@
 |
 */
 Route::get('/', 'SystemController@form')->name('form');
+Route::post('/import', 'SystemController@import')->name('import');
 Route::get('/report', 'SystemController@report')->name('report');

@@ -14,6 +14,8 @@
                         </div>
                     @endif
 
+                    {{ Form::open(['route' => ['import']]) }}
+
                     <div style="overflow: hidden;overflow-x: auto;width: 100%">
 
                         <table class="table table-striped table-bordered table-hover" style="font-size: 11px;">
@@ -49,8 +51,9 @@
 
                     </div>
 
-                    <button name="import"> Import </button>
+                    {{ Form::submit('Import') }}
 
+                    {{ Form::close() }}
                 </div>
             </div>
         </div>

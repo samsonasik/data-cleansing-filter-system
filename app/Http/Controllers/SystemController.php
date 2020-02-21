@@ -145,6 +145,11 @@ class SystemController extends Controller
         ]);
     }
 
+    public function import()
+    {
+        return redirect('report');
+    }
+
     public function report()
     {
         $log = LogDataCleansingFilter::all();
