@@ -18,6 +18,9 @@ Route::post('/import', 'SystemController@import')
         // import to customers table
         App\Http\Middleware\CustomerImport::class,
 
+        // pull customers data from db and set to "customers" attributes in Request instance
+        App\Http\Middleware\SetCustomersAttribute::class,
+
         // filtering data that need to be cleaned
         App\Http\Middleware\CustomerHonorific::class,
     ]);

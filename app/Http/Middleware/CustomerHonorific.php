@@ -2,7 +2,6 @@
 
 namespace App\Http\Middleware;
 
-use App\Customer;
 use Closure;
 
 class CustomerHonorific
@@ -25,7 +24,7 @@ class CustomerHonorific
     public function handle($request, Closure $next)
     {
         $datacleansing = $request->attributes->get('datacleansing');
-        $customers     = Customer::all();
+        $customers     = $request->attributes->get('customers');
 
         foreach ($customers as $customer) {
             if ($customer->title === null) {
