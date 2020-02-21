@@ -57,7 +57,9 @@
 
                     </div>
 
-                    {{ Form::submit('Import') }}
+                    @if (! $customers->isEmpty())
+                        {{ Form::submit('Import') }}
+                    @endif
 
                     {{ Form::close() }}
                 </div>
