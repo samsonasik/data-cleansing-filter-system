@@ -56,6 +56,6 @@ class SystemController extends Controller
         LogDataCleansingFilter::whereNotNull('id')->delete();;
         Customer::whereNotNull('id')->delete();
 
-        exit;
+        return;
     }
 }
