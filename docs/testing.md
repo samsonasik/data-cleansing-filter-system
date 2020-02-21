@@ -1,7 +1,7 @@
 Testing
 =======
 
-On very first run, you need to create database, migration, and db seed for testing purpose with set `.env.testing` file from `.env.example.testing`:
+On very first run, you need to create database, and migration for testing purpose with set `.env.testing` file from `.env.example.testing`:
 
 ```bash
 cp .env.example.testing .env.testing
