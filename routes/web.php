@@ -11,5 +11,15 @@
 |
 */
 Route::get('/', 'SystemController@form')->name('form');
-Route::post('/import', 'SystemController@import')->name('import');
+
+Route::post('/import', 'SystemController@import')
+    ->name('import')
+    ->middleware([
+        // import to customers table
+        App\Http\Middleware\CustomerImport::class,
+
+        // filtering data that need to be cleaned
+        App\Http\Middleware\CustomerHonorific::class,
+    ]);
+
 Route::get('/report', 'SystemController@report')->name('report');

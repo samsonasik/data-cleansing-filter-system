@@ -15,7 +15,7 @@ class SystemController extends Controller
         $this->customers = include storage_path('app/customers.php');
     }
 
-    public function form()
+    public function form(Request $request)
     {
         $isImported = ! Customer::all()->isEmpty();
         $customers  = $isImported ? [] : $this->customers;
