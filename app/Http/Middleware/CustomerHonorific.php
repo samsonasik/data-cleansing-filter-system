@@ -35,7 +35,7 @@ class CustomerHonorific
                 continue;
             }
 
-            $datacleansing[$customer->id]['title'] = sprintf('title  must be empty, or %s, or %s',
+            $datacleansing[$customer->id]['title'] = sprintf('title is invalid, use %s, or %s',
                 self::ALLOWED_HONORIFIC[1],
                 self::ALLOWED_HONORIFIC[2]
             );

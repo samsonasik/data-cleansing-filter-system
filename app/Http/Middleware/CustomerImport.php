@@ -23,17 +23,17 @@ class CustomerImport
 
         $customers = include storage_path('app/customers.php');
         foreach ($customers as $customer) {
-            $c = new Customer();
-            $c->title = $customer['title'];
-            $c->name = $customer['name'];
-            $c->date_of_birth = $customer['date_of_birth'];
-            $c->address = $customer['address'];
-            $c->city = $customer['city'];
-            $c->region = $customer['region'];
-            $c->postcode = $customer['postcode'];
-            $c->country_code = $customer['country_code'];
-            $c->telephone = $customer['telephone'];
-            $c->save();
+            $model = new Customer();
+            $model->title = $customer['title'];
+            $model->name = $customer['name'];
+            $model->date_of_birth = $customer['date_of_birth'];
+            $model->address = $customer['address'];
+            $model->city = $customer['city'];
+            $model->region = $customer['region'];
+            $model->postcode = $customer['postcode'];
+            $model->country_code = $customer['country_code'];
+            $model->telephone = $customer['telephone'];
+            $model->save();
         }
 
         return $next($request);
