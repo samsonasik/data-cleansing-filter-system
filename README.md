@@ -8,5 +8,5 @@ Data Cleansing Filter System
 [2. Database Structure](/docs/database-structure.md)\
 [3. Import Flow](/docs/flow.md)\
 [4. Usage](/docs/usage.md)\
-[5. Testing](/docs/testing.md)
+[5. Testing](/docs/testing.md)\
 [6. Continues Integration](/docs/continues-integration.md)
