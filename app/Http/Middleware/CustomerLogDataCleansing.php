@@ -7,6 +7,17 @@ use Closure;
 
 class CustomerLogDataCleansing
 {
+    private const COLUMNS = [
+        'title',
+        'name',
+        'date_of_birth',
+        'address',
+        'city',
+        'region',
+        'postcode',
+        'country_code',
+    ];
+
     /**
      * Handle an incoming request.
      *
@@ -22,26 +33,10 @@ class CustomerLogDataCleansing
                 $model = new LogDataCleansingFilter();
                 $model->customer_id = $key;
                 $model->score       = $row['score'];
-                if (! empty($row['title'])) {
-                    $model->title_correct_suggestion = $row['title'];
-                }
-                if (! empty($row['name'])) {
-                    $model->name_correct_suggestion = $row['name'];
-                }
-                if (! empty($row['date_of_birth'])) {
-                    $model->date_of_birth_correct_suggestion = $row['date_of_birth'];
-                }
-                if (! empty($row['address'])) {
-                    $model->address_correct_suggestion = $row['address'];
-                }
-                if (! empty($row['city'])) {
-                    $model->city_correct_suggestion = $row['city'];
-                }
-                if (! empty($row['region'])) {
-                    $model->region_correct_suggestion = $row['region'];
-                }
-                if (! empty($row['postcode'])) {
-                    $model->postcode_correct_suggestion = $row['postcode'];
+                foreach (self::COLUMNS as $column) {
+                    if (! empty($row[$column])) {
+                        $model->{$column . '_correct_suggestion'} = $row[$column];
+                    }
                 }
                 $model->save();
             }
