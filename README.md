@@ -6,4 +6,5 @@ Data Cleansing Filter System
 
 [1. Installation](/docs/installation.md)\
 [2. Database Structure](/docs/database-structure.md)\
-[3. Testing](/docs/testing.md)
+[3. Import Flow](/docs/flow.md)
+[4. Testing](/docs/testing.md)
