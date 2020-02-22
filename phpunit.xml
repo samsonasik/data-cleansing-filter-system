@@ -30,6 +30,7 @@
             <file>./app/Http/Middleware/CustomerAddress.php</file>
             <file>./app/Http/Middleware/CustomerLogDataCleansing.php </file>
             <file>./app/Http/Middleware/CustomerCity.php</file>
+            <file>./app/Http/Middleware/CustomerRegion.php</file>
             <!-- <directory suffix=".php"></directory>
             <exclude>
                 <file>../ext_emconf.php</file>
