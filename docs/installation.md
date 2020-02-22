@@ -35,3 +35,5 @@ php artisan serve
 ```
 
 5. Open in the browser http://localhost:8000
+
+[>>> Next (Database Structure)](/docs/database-structure.md)

@@ -36,3 +36,6 @@ First, we import the collection in the form into `customers` table, after it, we
 Each middleware filter has constant `SCORE` that will be used to when data is invalid. They can be activated by add/remove the filters.
 
 Finally, save log data, there is `CustomerLogDataCleansing::COLUMNS` constant for saving to DB what fields that need suggestion for correction.
+
+[>>> Prev (Database Structure)](/docs/database-structure.md)
+[>>> Next (Usage)](/docs/usage.md)
