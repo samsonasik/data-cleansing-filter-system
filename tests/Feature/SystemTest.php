@@ -25,10 +25,17 @@ class SystemTest extends TestCase
 
     public function testImportCustomersFillCustomersDataAndRedirectToReport()
     {
+        $this->assertCount(0, Customer::all());
         $response = $this->post('/import');
         $this->assertCount(12, Customer::all());
         $response->assertStatus(302);
         $response->assertRedirect(route('report'));
+
+        // consecutive call to hit customer is imported
+        // no session flash as already imported
+        $this->assertCount(12, Customer::all());
+        $response = $this->post('/import');
+        $this->assertCount(12, Customer::all());
     }
 
     public function testDeleteDataMakeEmptyRecords()
