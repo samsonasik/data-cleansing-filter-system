@@ -34,7 +34,6 @@ class SystemTest extends TestCase
         $response->assertRedirect(route('report'));
 
         // consecutive call to hit customer is imported
-        // no session flash as already imported
         $this->assertCount(12, Customer::all());
         $response = $this->post('/import');
         $this->assertCount(12, Customer::all());

@@ -24,6 +24,7 @@ Route::post('/import', 'SystemController@import')
         // filtering data that need to be cleaned
         App\Http\Middleware\CustomerTitle::class,
         App\Http\Middleware\CustomerName::class,
+        App\Http\Middleware\CustomerDOB::class,
 
         // finally, save log data cleansing if any errors
         App\Http\Middleware\CustomerLogDataCleansing::class,

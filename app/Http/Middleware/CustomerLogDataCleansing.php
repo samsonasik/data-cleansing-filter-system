@@ -28,6 +28,9 @@ class CustomerLogDataCleansing
                 if (! empty($row['name'])) {
                     $model->name_correct_suggestion = $row['name'];
                 }
+                if (! empty($row['date_of_birth'])) {
+                    $model->date_of_birth_correct_suggestion = $row['date_of_birth'];
+                }
                 $model->save();
             }
         }

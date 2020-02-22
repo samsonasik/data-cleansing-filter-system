@@ -3,11 +3,11 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Naming\Validator\Naming;
 
-class CustomerName
+class CustomerDOB
 {
-    private const SCORE = 10;
+    private const FORMAT = 'Y-m-d';
+    private const SCORE  = 10;
 
     /**
      * Handle an incoming request.
@@ -20,14 +20,13 @@ class CustomerName
     {
         $datacleansing = $request->attributes->get('datacleansing');
         $customers     = $request->attributes->get('customers');
-        $validator     = new Naming();
 
         foreach ($customers as $customer) {
-            if ($validator->isValid($customer->name)) {
+            if ($customer->date_of_birth < date('Y-m-d')) {
                 continue;
             }
 
-            $datacleansing[$customer->id]['name'] = current($validator->getMessages());
+            $datacleansing[$customer->id]['date_of_birth'] = 'date of birth must be lower than current date';
             $datacleansing[$customer->id]['score'] = empty($datacleansing[$customer->id]['score'])
                 ? self::SCORE
                 : ($datacleansing[$customer->id]['score'] + self::SCORE);
