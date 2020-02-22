@@ -22,6 +22,10 @@
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
             <file>./app/Http/Controllers/SystemController.php</file>
+            <file>./app/Http/Middleware/CustomerImport.php </file>
+            <file>./app/Http/Middleware/SetCustomersAttribute.php </file>
+            <file>./app/Http/Middleware/CustomerHonorific.php </file>
+            <file>./app/Http/Middleware/CustomerLogDataCleansing.php </file>
             <!-- <directory suffix=".php"></directory>
             <exclude>
                 <file>../ext_emconf.php</file>
