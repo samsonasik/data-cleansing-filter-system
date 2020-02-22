@@ -59,7 +59,7 @@
                     </div>
 
                     @if (! $isEmpty)
-                        <button name="truncate">Truncate data to retry import</button>
+                        <button onclick="window.location.href = '{{ route('delete') }}';" name="delete">Clear data to retry import</button>
                     @endif
 
                 </div>

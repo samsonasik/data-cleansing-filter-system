@@ -46,16 +46,14 @@ class SystemController extends Controller
         ]);
     }
 
-    /**
-     * @internal
-     *
-     * Used for debugging purpose
-     */
-    public function delete()
+    public function delete(Request $request)
     {
         LogDataCleansingFilter::whereNotNull('id')->delete();;
         Customer::whereNotNull('id')->delete();
 
-        return;
+        $request->session()
+                ->flash('status', 'Data has been cleared');
+
+        return redirect()->route('report');
     }
 }
