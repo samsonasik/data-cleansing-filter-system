@@ -15,12 +15,14 @@ class SystemTest extends TestCase
     {
         $response = $this->get('/');
         $response->assertStatus(200);
+        $this->assertCount(0, Customer::all());
     }
 
     public function testDisplayEmptyReport()
     {
         $response = $this->get('/report');
         $response->assertStatus(200);
+        $this->assertCount(0, LogDataCleansingFilter::all());
     }
 
     public function testImportCustomersFillCustomersDataAndRedirectToReport()
