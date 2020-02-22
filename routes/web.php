@@ -28,6 +28,7 @@ Route::post('/import', 'SystemController@import')
         App\Http\Middleware\CustomerAddress::class,
         App\Http\Middleware\CustomerCity::class,
         App\Http\Middleware\CustomerRegion::class,
+        App\Http\Middleware\CustomerPostCode::class,
 
         // finally, save log data cleansing if any errors
         App\Http\Middleware\CustomerLogDataCleansing::class,

@@ -31,6 +31,7 @@
             <file>./app/Http/Middleware/CustomerLogDataCleansing.php </file>
             <file>./app/Http/Middleware/CustomerCity.php</file>
             <file>./app/Http/Middleware/CustomerRegion.php</file>
+            <file>./app/Http/Middleware/CustomerPostCode.php</file>
             <!-- <directory suffix=".php"></directory>
             <exclude>
                 <file>../ext_emconf.php</file>

@@ -40,6 +40,9 @@ class CustomerLogDataCleansing
                 if (! empty($row['region'])) {
                     $model->region_correct_suggestion = $row['region'];
                 }
+                if (! empty($row['postcode'])) {
+                    $model->postcode_correct_suggestion = $row['postcode'];
+                }
                 $model->save();
             }
         }
