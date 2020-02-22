@@ -9,3 +9,4 @@ Data Cleansing Filter System
 [3. Import Flow](/docs/flow.md)\
 [4. Usage](/docs/usage.md)\
 [5. Testing](/docs/testing.md)
+[6. Continues Integration](/docs/continues-integration.md)

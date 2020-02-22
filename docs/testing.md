@@ -31,3 +31,5 @@ After it, you can run:
 vendor/bin/phpunit
 ````
 
+[>>> Prev (Usage)](/docs/usage.md)
+[>>> Next (Continues Integration)](/docs/continues-integration.md)
