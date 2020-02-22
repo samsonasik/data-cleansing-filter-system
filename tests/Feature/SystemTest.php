@@ -40,6 +40,10 @@ class SystemTest extends TestCase
 
     public function testDeleteDataMakeEmptyRecords()
     {
+        // fill first
+        $this->post('/import');
+        $this->assertCount(12, Customer::all());
+
         $this->get('/delete');
         $this->assertCount(0, Customer::all());
         $this->assertCount(0, LogDataCleansingFilter::all());
