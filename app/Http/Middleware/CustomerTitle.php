@@ -4,9 +4,9 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class CustomerHonorific
+class CustomerTitle
 {
-    private const ALLOWED_HONORIFIC = [
+    private const ALLOWED_TITLE = [
         null,
         'Mr.',
         'Mrs',
@@ -31,13 +31,13 @@ class CustomerHonorific
                 continue;
             }
 
-            if (in_array($customer->title, self::ALLOWED_HONORIFIC)) {
+            if (in_array($customer->title, self::ALLOWED_TITLE)) {
                 continue;
             }
 
             $datacleansing[$customer->id]['title'] = sprintf('title is invalid, you can set it empty, or %s, or %s',
-                self::ALLOWED_HONORIFIC[1],
-                self::ALLOWED_HONORIFIC[2]
+                self::ALLOWED_TITLE[1],
+                self::ALLOWED_TITLE[2]
             );
             $datacleansing[$customer->id]['score'] = empty($datacleansing[$customer->id]['score'])
                 ? self::SCORE

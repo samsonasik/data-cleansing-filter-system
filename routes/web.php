@@ -22,7 +22,8 @@ Route::post('/import', 'SystemController@import')
         App\Http\Middleware\SetCustomersAttribute::class,
 
         // filtering data that need to be cleaned
-        App\Http\Middleware\CustomerHonorific::class,
+        App\Http\Middleware\CustomerTitle::class,
+        App\Http\Middleware\CustomerName::class,
 
         // finally, save log data cleansing if any errors
         App\Http\Middleware\CustomerLogDataCleansing::class,
