@@ -21,7 +21,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-3. Run Create DB Command, db migration, and db seeds:
+3. Run Create DB Command, and db migration:
 
 ```
 php artisan database:create
