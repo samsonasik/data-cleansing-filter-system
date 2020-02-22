@@ -34,6 +34,9 @@ class CustomerLogDataCleansing
                 if (! empty($row['address'])) {
                     $model->address_correct_suggestion = $row['address'];
                 }
+                if (! empty($row['city'])) {
+                    $model->city_correct_suggestion = $row['city'];
+                }
                 $model->save();
             }
         }
