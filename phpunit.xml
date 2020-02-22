@@ -27,6 +27,7 @@
             <file>./app/Http/Middleware/CustomerTitle.php </file>
             <file>./app/Http/Middleware/CustomerName.php </file>
             <file>./app/Http/Middleware/CustomerDOB.php </file>
+            <file>./app/Http/Middleware/CustomerAddress.php</file>
             <file>./app/Http/Middleware/CustomerLogDataCleansing.php </file>
             <!-- <directory suffix=".php"></directory>
             <exclude>

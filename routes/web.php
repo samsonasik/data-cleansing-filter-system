@@ -25,6 +25,7 @@ Route::post('/import', 'SystemController@import')
         App\Http\Middleware\CustomerTitle::class,
         App\Http\Middleware\CustomerName::class,
         App\Http\Middleware\CustomerDOB::class,
+        App\Http\Middleware\CustomerAddress::class,
 
         // finally, save log data cleansing if any errors
         App\Http\Middleware\CustomerLogDataCleansing::class,

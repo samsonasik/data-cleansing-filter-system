@@ -31,6 +31,9 @@ class CustomerLogDataCleansing
                 if (! empty($row['date_of_birth'])) {
                     $model->date_of_birth_correct_suggestion = $row['date_of_birth'];
                 }
+                if (! empty($row['address'])) {
+                    $model->address_correct_suggestion = $row['address'];
+                }
                 $model->save();
             }
         }
