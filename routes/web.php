@@ -30,6 +30,7 @@ Route::post('/import', 'SystemController@import')
         App\Http\Middleware\CustomerRegion::class,
         App\Http\Middleware\CustomerPostCode::class,
         App\Http\Middleware\CustomerCountryCode::class,
+        App\Http\Middleware\CustomerTelephone::class,
 
         // finally, save log data cleansing if any errors
         App\Http\Middleware\CustomerLogDataCleansing::class,

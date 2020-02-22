@@ -7,7 +7,7 @@ use Closure;
 
 class CustomerCity
 {
-    private const SCORE  = 10;
+    public const SCORE  = 10;
 
     /**
      * Handle an incoming request.
@@ -30,7 +30,7 @@ class CustomerCity
                 continue;
             }
 
-            $datacleansing[$customer['id']]['city'] = 'city is required';
+            $datacleansing[$customer['id']]['city'] = $validator->messages()->first();
             $datacleansing[$customer['id']]['score'] = empty($datacleansing[$customer['id']]['score'])
                 ? self::SCORE
                 : ($datacleansing[$customer['id']]['score'] + self::SCORE);

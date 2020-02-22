@@ -16,6 +16,7 @@ class CustomerLogDataCleansing
         'region',
         'postcode',
         'country_code',
+        'telephone',
     ];
 
     /**

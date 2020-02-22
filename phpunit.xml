@@ -33,11 +33,7 @@
             <file>./app/Http/Middleware/CustomerRegion.php</file>
             <file>./app/Http/Middleware/CustomerPostCode.php</file>
             <file>./app/Http/Middleware/CustomerCountryCode.php</file>
-            <!-- <directory suffix=".php"></directory>
-            <exclude>
-                <file>../ext_emconf.php</file>
-                <directory suffix=".php">../tests</directory>
-            </exclude> -->
+            <file>./app/Http/Middleware/CustomerTelephone.php</file>
         </whitelist>
     </filter>
 </phpunit>

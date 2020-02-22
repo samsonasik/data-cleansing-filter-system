@@ -8,7 +8,7 @@ use Closure;
 
 class CustomerCountryCode
 {
-    private const SCORE  = 10;
+    public const SCORE  = 10;
 
     /**
      * Handle an incoming request.
@@ -31,7 +31,7 @@ class CustomerCountryCode
                 continue;
             }
 
-            $datacleansing[$customer['id']]['country_code'] = 'country code is invalid';
+            $datacleansing[$customer['id']]['country_code'] = $validator->messages()->first();
             $datacleansing[$customer['id']]['score'] = empty($datacleansing[$customer['id']]['score'])
                 ? self::SCORE
                 : ($datacleansing[$customer['id']]['score'] + self::SCORE);

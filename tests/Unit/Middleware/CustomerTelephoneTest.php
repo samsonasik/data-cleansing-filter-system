@@ -2,17 +2,17 @@
 
 namespace Tests\Unit\Middleware;
 
-use App\Http\Middleware\CustomerCity;
+use App\Http\Middleware\CustomerTelephone;
 use Illuminate\Http\Request;
 use Tests\TestCase;
 
-class CustomerCityTest extends TestCase
+class CustomerTelephoneCodeTest extends TestCase
 {
     private $middleware;
 
     protected function setUp(): void
     {
-        $this->middleware = new CustomerCity();
+        $this->middleware = new CustomerTelephone();
     }
 
     public function testHandleScoreStillEmptySameWithScoreConstant()
@@ -28,9 +28,10 @@ class CustomerCityTest extends TestCase
                     'customers',
                     collect([
                         [
-                            'id' => 1,
-                            'city' => '',
-                        ]
+                            'id'       => 1,
+                            'telephone' => 123,
+                            'country_code' => 'XX'
+                        ],
                     ])
                 );
 

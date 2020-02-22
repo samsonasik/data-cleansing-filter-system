@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Illuminate\Support\Facades\Validator;
 use Closure;
 
-class CustomerAddress
+class CustomerTelephone
 {
     public const SCORE  = 10;
 
@@ -23,14 +23,14 @@ class CustomerAddress
 
         foreach ($customers->toArray() as $customer) {
             $validator = Validator::make($customer, [
-                'address' => 'required|min:1',
+                'telephone' => 'phone:' . $customer['country_code'],
             ]);
 
             if (! $validator->fails()) {
                 continue;
             }
 
-            $datacleansing[$customer['id']]['address'] = $validator->messages()->first();
+            $datacleansing[$customer['id']]['telephone'] = sprintf('invalid phone number for country %s', $customer['country_code']);
             $datacleansing[$customer['id']]['score'] = empty($datacleansing[$customer['id']]['score'])
                 ? self::SCORE
                 : ($datacleansing[$customer['id']]['score'] + self::SCORE);

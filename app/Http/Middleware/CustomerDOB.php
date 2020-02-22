@@ -7,7 +7,7 @@ use Closure;
 class CustomerDOB
 {
     private const FORMAT = 'Y-m-d';
-    private const SCORE  = 10;
+    public const SCORE  = 10;
 
     /**
      * Handle an incoming request.

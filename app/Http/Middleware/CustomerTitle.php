@@ -12,7 +12,7 @@ class CustomerTitle
         'Mrs',
     ];
 
-    private const SCORE = 10;
+    public const SCORE = 10;
 
     /**
      * Handle an incoming request.

@@ -35,6 +35,6 @@ class CustomerAddressTest extends TestCase
                 );
 
         $this->middleware->handle($request, function () { });
-        $this->assertEquals(10, $request->attributes->get('datacleansing')[1]['score']);
+        $this->assertEquals($this->middleware::SCORE, $request->attributes->get('datacleansing')[1]['score']);
     }
 }

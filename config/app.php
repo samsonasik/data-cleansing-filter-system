@@ -176,6 +176,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Axlon\PostalCodeValidation\ValidationServiceProvider::class,
+        Propaganistas\LaravelPhone\PhoneServiceProvider::class,
 
     ],
 

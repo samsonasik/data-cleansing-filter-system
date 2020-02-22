@@ -32,6 +32,6 @@ class CustomerTitleTest extends TestCase
         ]);
 
         $this->middleware->handle($request, function () { });
-        $this->assertEquals(20, $request->attributes->get('datacleansing')[1]['score']);
+        $this->assertEquals($this->middleware::SCORE + 10, $request->attributes->get('datacleansing')[1]['score']);
     }
 }
