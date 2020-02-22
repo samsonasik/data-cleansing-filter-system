@@ -25,6 +25,9 @@ class CustomerLogDataCleansing
                 if (! empty($row['title'])) {
                     $model->title_correct_suggestion = $row['title'];
                 }
+                if (! empty($row['name'])) {
+                    $model->name_correct_suggestion = $row['name'];
+                }
                 $model->save();
             }
         }
